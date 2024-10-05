@@ -170,8 +170,7 @@ console.log('Mahasiswa ke-' + (i + 1) + ' : ' + arr[1]);
 }*/
 
 //2. join
-/*var arr = ["mohamad", "fiky", "Bella"];
-console.log(arr.join('-'));*/
+//console.log(arr.join('-'));
 
 //3.push & pop
 /*arr.push('Doddy', 'Fitri');
@@ -183,3 +182,16 @@ console.log(arr.join('-'));*/
 //arr.unshift('Doddy');
 /*arr.shift();
 console.log(arr.join('-'));*/
+
+//var arr = ["mohamad", "fiky", "Bella"];
+//5. Slice dan Splice
+//splice(indexAwal, mauDihapusBerapa, elemenBaru1, elemenBaru2, ...)
+//arr.splice(2, 0, 'Doddy');
+//arr.splice(1, 2, 'Doddy', 'Fitri);
+//console.log(arr.join('-'));
+
+//6. slice(awal, akhir);
+//var arr = ['Fiky', 'Evvi', 'Lia', 'Doddy','Fitri'];
+//var arr2 = arr.slice(1, 3);
+//console.log(arr.join('-'));
+//console.log(arr2.join('-'));
