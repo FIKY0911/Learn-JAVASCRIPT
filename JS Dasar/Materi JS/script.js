@@ -97,6 +97,34 @@ if (time < 10) {
   greeting = "Good evening";
 }*/
 
+//Operator Logica//
+// const password = prompt('Masukkan password');
+
+//Memasukkan password 6 karakter
+// if (password.length >= 6) {
+//     if (password.indexOf(' ') === -1) {
+//         alert('Password valid');
+//     } else {
+//         alert('Password tidak boleh spasi');
+//     }
+// }
+
+//Operator Logic And//
+// if (password.length >= 6 && password.indexOf(' ') === -1) {
+//     alert('Password valid');
+// } else {
+//     alert('Password invalid');
+// }
+
+//Operator Logika Or//
+// const role = prompt('Masukkan Admin atau spv');
+
+// if (role === 'Admin' || role === 'spv') {
+//     alert('Boleh mengakses');
+// } else {
+//     alert('Tidak boleh mengakses');
+// }
+
 //Switch//
 /*var text;
 var fruits = document.getElementById("myInput").value;
@@ -195,3 +223,140 @@ console.log(arr.join('-'));*/
 //var arr2 = arr.slice(1, 3);
 //console.log(arr.join('-'));
 //console.log(arr2.join('-'));
+
+//7. Forench
+// let angka = (1,2,3,4,5,6,7,8);
+// var nama = ['Fiky', 'Bella', 'Yohan'];
+/*for (var i = 0; i < angka.length; i++) {
+console.log(angka[1]);
+}*/
+// angka.forEach (function(e) {
+// console.log(e);
+// });
+/* nama.forEach(function(e, i) {
+  console.log('Mahasiswa ke-' + i + 'adalah :' + e);
+});*/
+
+//7. Map
+/*var angka = [1,2,5,3,6,8,4];
+var angka2 = angka.map(function(e) {
+  return e * 2;
+});
+console.log(angka2.join('-'));*/
+
+//8. Sort
+/*var angka = [1,2,5,3,6,8,4];
+angka.sort();
+console.log(angka.join('-'));*/
+
+/*var angka = [1,2,10,5,20,3,6,8,4];
+angka.sort(function(a,b){
+return a-b;
+})
+console.log(angka.join('-'));*/
+
+//9. Filter
+/*var angka = [1,2,10,5,20,3,6,8,4];
+var angka2 = angka.filter(function(x) {
+  return x > 5;
+});
+console.log(angka2.join('-'));*/
+
+//10.find
+/*var angka = [1,2,10,5,20,3,6,8,4];
+var angka2 = angka.find(function(x) {
+  return x > 5;
+});
+console.log(angka2);*/
+
+//Object//
+//Membuat project
+//Object Literal
+/*var mhs1 = {
+  nama : 'Mohamad Fiky',
+  nim : '1234567890',
+  umur : 19,
+  jurusan : 'Teknik Informatika'
+}
+
+var mhs2 = {
+  nama : 'Bella',
+  nim : '1234567890',
+  umur : 20,
+  jurusan : 'Perawat'
+}*/
+
+//Function Declaration
+/*function buatObjectMahasiswa(nama, nim, umur, jurusan) {
+  var mhs = {};
+  mhs.nama = nama;
+  mhs.nim = nim;
+  mhs.umur = umur;
+  mhs.jurusan = jurusan;
+  return mhs;
+}
+
+var mhs3 = buatObjectMahasiswa('Yohan', '1234567890',22, 'Teknik Informatika');*/
+
+//Constructor
+
+/*function Mahasiswa(nama, nim, umur, jurusan) {
+  // var this = {};
+  this.nama = nama;
+  this.nim = nim;
+  this.umur = umur;
+  this.jurusan = jurusan;
+  //return this;
+}
+
+var mhs4 = new Mahasiswa('Doddy', '1234567890', 21, 'Perawat');*/
+
+//Mebuat Object
+//cara1 - function declaration
+/*function halo() {
+  console.log('halo');
+}
+halo;*/
+
+//cara2 - object literal
+/*var obj = {};
+obj.halo = function() {
+  console.log('halo');
+}
+obj.halo();*/
+
+//cara3 - constructor
+/*function Halo() {
+  console.log('halo');
+}
+new Halo();*/
+
+//This//
+/*var a = 10;
+console.log(window.a);*/
+
+//cara1 - function declaration
+/*function halo() {
+  console.log(this);
+  console.log('halo');
+}
+halo;*/
+//This mengembalikan object Global
+
+//cara2 - object literal
+/*var obj = {a : 10, nama : 'Fiky};
+obj.halo = function() {
+  console.log(this);
+  console.log('halo');
+}
+obj.halo();*/
+//This mengembalikan obect yang bersangkutan
+
+//cara3 - constructor
+/*function Halo() {
+  console.log(this);
+  console.log('halo');
+}
+var obj1 = new Halo();
+var obj2 = new Halo();*/
+//This mengembalikan object yang baru dibuat
