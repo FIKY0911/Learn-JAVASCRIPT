@@ -1,0 +1,154 @@
+*,
+*:before, 
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linier-gradient(135deg, #8076ff, #00d9ff);
+}
+
+h1 {
+    color: #ff00ff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.container {
+    border: 2px solid #fff;
+    background-color: #808080;
+    position: absolute;
+    width: 40%;
+    min-width: 450px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 1.3rem 1.8rem;
+}
+
+#newtask {
+    position: relative;
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+#newtask input {
+    width: 65%;
+    height: 2.8rem;
+    padding: 1.5rem;
+    font-family: "Merienda", cursive, sans-serif;
+    border: 2px solid #d1d3d4;
+    border-radius: 1rem;
+    outline: none;
+    font-size: 1.2rem;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+}
+
+#newtask input:focus {
+    outline: none;
+    border: 2px solid #dbdbdb;
+    border-radius: 1.3rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#newtask button{
+    position: relative;
+    float: right;
+    width: 22%;
+    height: 3rem;
+    background-color: #c0c0c0;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: "Merienda", cursive, sans-serif;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+#newtask button:hover {
+    background-color: #ffffff;
+    color: #c0c0c0;
+    transform: skewX(20deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+}
+
+#newtask button:active {
+    transform: translateY(0.1rem);
+}
+
+#tasks{
+    margin-top: 2rem;
+    padding: 1.5rem  1rem;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+    width: 100%;
+    position: relative;
+}
+
+.task{
+    background-color: #ffffff;
+    height: 60px;
+    padding: 5px 15px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #d1d3d4;
+    cursor: pointer;
+}
+
+.task span{
+    font-family: "Merienda", cursive, sans-serif;
+    font-size: 18px;
+    padding: 15 20px;
+    font-weight: 500;
+}
+
+
+.task button{
+    background-color: #c0c0c0;
+    color: #ffffff;
+    height: 90%;
+    width: 45px;
+    border-radius: 0.2rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.task button:hover{
+    background-color: #ffffff;
+    color: #c0c0c0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+    transform: translateY(-0.1rem);
+}
+
+.task button:active{
+    transform: translateY(0.1rem);
+}
+
+.completed{
+    background-color: #c0c0c0;
+    color: #ffffff;
+    text-decoration: line-through;
+}
+
+.task.completed button{
+    background-color: #ffffff;
+    color: #c0c0c0;
+}

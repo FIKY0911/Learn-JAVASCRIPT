@@ -23,25 +23,25 @@
 //Object
 
 //Contoh//
-/*//Numbers:
+/*Numbers:
 let length = 16;
 let weight = 7.5;
 
-// Strings:
+=Strings:
 let color = "Yellow";
 let lastName = "Johnson";
 
-// Booleans
+=Booleans
 let x = true;
 let y = false;
 
-// Object:
+=Object:
 const person = {firstName:"John", lastName:"Doe"};
 
-// Array object:
+=Array object:
 const cars = ["Saab", "Volvo", "BMW"];
 
-// Date object:
+=Date object:
 const date = new Date("2022-03-25");*/
 
 //Variable//
@@ -98,16 +98,18 @@ if (time < 10) {
 }*/
 
 //Operator Logica//
-// const password = prompt('Masukkan password');
+/*
+const password = prompt('Masukkan password');
 
-//Memasukkan password 6 karakter
-// if (password.length >= 6) {
-//     if (password.indexOf(' ') === -1) {
-//         alert('Password valid');
-//     } else {
-//         alert('Password tidak boleh spasi');
-//     }
-// }
+//Memasukkan password 6 karakter//
+if (password.length >= 6) {
+    if (password.indexOf(' ') === -1) {
+        alert('Password valid');
+    } else {
+        alert('Password tidak boleh spasi');
+    }
+}
+*/
 
 //Operator Logic And//
 // if (password.length >= 6 && password.indexOf(' ') === -1) {
@@ -163,9 +165,48 @@ function myFunction() {
 }*/
 
 //Func scope//
-/*function myFunction() {
-    var carName = "Volvo";   // Function Scope
-  }*/
+/*
+let linux = "RedHat"
+
+function easyLinux() {
+  let linux = "Ubuntu"
+  console.log(linux); // Ubuntu
+}
+
+console.log(linux)//RedHat
+/*/
+
+//Block Scope//
+/*
+let tinggi = 8;
+
+if (tinggi > 5) {
+  let lebar = 10;
+  console.log(lebar); //10
+}
+console.log(tinggi); //8
+console.log(lebar); //ReferenceError: lebar is not defined
+
+for (let i = 0; i < 5; i++) {
+  const indexNumber = i;
+  console.log(indexNumber); //0,1,2,3,4
+}
+
+console.log(indexNumber); //ReferenceError: indexNumber is not defined
+*/
+
+//Lexical Scope//
+/*
+function lamarKerja() {
+  const jabatnya = 'Programmer';
+  function dalamKerja() {
+  let kenalan = `Orang dalam bisa memasukkan ${jabatnya}`;
+    console.log(kenalan);
+  }
+  orangDalam();
+}
+  console.log(lamarKerja()); //ReferenceError: a is not defined
+*/
 
 //Rekursif//
 /*function cetakAngka(n) {
@@ -269,6 +310,31 @@ var angka2 = angka.find(function(x) {
 });
 console.log(angka2);*/
 
+//11. Every dan some
+/* 
+const kataKata=['kita', 'adalah', 'mahasiswa'];
+kata.every(kaya => {
+  return kaya.length > 3;
+}
+) //true
+
+const kataKata=['kita', 'adalah', 'mahasiswa'];
+kata.some(kaya => {
+  return kaya.length > 3;
+}
+) //true
+*/
+
+//12. Reduce
+/*
+const subtotal = [1500,20000,4000,19000,32000];
+
+const total = subtotal.reduce((curentTotal, singleSubtotal) => {return curentTotal + singleSubtotal});
+Proses 1|1500 + 20000 = 21500
+Proses 2|21500 + 4000 = 25500
+dst.
+*/
+
 //Object//
 //Membuat project
 //Object Literal
@@ -300,16 +366,41 @@ var mhs3 = buatObjectMahasiswa('Yohan', '1234567890',22, 'Teknik Informatika');*
 
 //Constructor
 
-/*function Mahasiswa(nama, nim, umur, jurusan) {
-  // var this = {};
-  this.nama = nama;
-  this.nim = nim;
-  this.umur = umur;
-  this.jurusan = jurusan;
-  //return this;
+/*function saya= {
+  nama = 'Mohamad Fiky',
+  nim = '1234567890',
+  umur = 19,
+  jurusan = 'Teknik Informatika'
+  mahasiswa = function() {
+    console.log('Halo, nama saya ' + this.nama + ', nim saya ' + this.nim + ', umur saya ' + this.umur + ', jurusan saya ' + this.jurusan);
+  }
+}
+*/
+
+//Objek This dalam arrow function mengarah pada objek global window//
+/* 
+function saya= {
+  nama = 'Mohamad Fiky',
+  nim = '1234567890',
+  mahasiswa: () => {
+    return `${this.nama} ${this.nim}`;//akan undifined undifined karena this mengarah pada window object
+  }
+
+  panggilNanti: () => {
+    setTimeout(() => {
+      console.log(this.nama + ' ' + this.nim);
+    }, 1000); //akan mengeluarkan undefined undefined karena this mengarah pada window object
 }
 
-var mhs4 = new Mahasiswa('Doddy', '1234567890', 21, 'Perawat');*/
+jika ingin menggunakan objek seperti ini maka menggunakan function biasa
+function saya= {
+  nama = 'Mohamad Fiky',
+  nim = '1234567890',
+  mahasiswa: function() {
+    return `${this.nama} ${this.nim}`;
+  }
+}
+*/
 
 //Mebuat Object
 //cara1 - function declaration
@@ -360,3 +451,133 @@ obj.halo();*/
 var obj1 = new Halo();
 var obj2 = new Halo();*/
 //This mengembalikan object yang baru dibuat
+
+//Pengkodisian//
+//ketika didalam try terdapat eror maka akan mengeluarkan suatu nilai yang berada dalam catch//
+/* 
+function teriak(msg){}
+try {
+  console.log(msg.toUpperCase());
+}catch(eror){
+  console.log('error');
+  console.log(Silahkan masukannkan pesan tipe data string');
+}
+}*/
+
+//Set Timeout & setinterval//
+/* 
+setTimeout(() => {
+  console.log('Hello World!');
+} , 2000); //Proses akan dieksekusi setelah 2 detik
+
+setInterval(() => {
+  console.log('Hello World!');
+}, 2000); //Akan melkakukan proses secara berulang setiap 2 detik
+clearInterval() untuk menghentikan setInterval
+*/
+
+//Default Value Parameter//
+//Default value parameter adalah nilai default yang diberikan pada parameter function jika tidak ada argumen yang diberikan saat memanggil function tersebut. Jika argumen diberikan, maka nilai default akan diabaikan dan argumen yang diberikan akan digunakan sebagai nilai parameter.//
+/*
+SALAH!!
+function perjalian (a,b){
+b = typeof b !== 'undefined' ? b : 1;
+return a * b;
+}
+
+BENER!!
+function tambah(a, b = 0) {
+  return a + b;// console.log(tambah(5, 10)); //15 
+}
+*/
+
+//spread opeator pada function//
+//mengubah suatu array atau objek atau bahkan string menjadi deet parameter untuk function//
+/*
+cosnt angka = [1,2,3,4]
+Math.mx(angka); //NaN
+Math.max(...angka); //4
+isinya sama seperti
+Math.max(1,2,3,4);//4
+*/
+
+//Merge array dengan spread operator//
+/*
+const angka = [1,2,3,4];
+const nama = [FIKY, BELLA, YOHAN, RECA];
+const campuran = [...angka, ...nama];
+console.log(campuran); //1,2,3,4,FIKY,BELLA,YOHAN,RECA
+
+
+const user = {
+  name: 'FIKY',
+  age: 19,
+  
+}
+
+const userDb = {...user, role: 'admin'};
+console.log(userDb); //{name: 'FIKY', age: 19, role: 'admin'}
+*/
+
+//rest param//
+//rest parameter adalah fitur pada JavaScript yang memungkinkan kita untuk mengumpulkan argumen yang tidak terbatas menjadi sebuah array. Ini berguna ketika kita tidak tahu berapa banyak argumen yang akan diterima oleh fungsi kita.//
+/*
+const nama = ['FIKY', 'BELLA', 'YOHAN', 'RECA', 'FITRI', 'DODDY'];
+
+const pemenang = (gold, silver, ...sisaJuara) => {
+*/
+
+//DESTRUCTING//
+/*Destructuring adalah fitur pada JavaScript yang memungkinkan kita untuk mengekstrak nilai dari array atau objek dan menyimpannya ke dalam variabel dengan cara yang lebih mudah dan ringkas. Ini sangat berguna ketika kita bekerja dengan data yang kompleks, seperti objek atau array bersarang.*/
+/*
+ARRAY
+const peserta = ['Batman', 'Ironman', 'Spongebob'];
+const [ketua, wakil, ...anggota] = peserta;
+
+cosnt [juara, ...peserta] =peserta;
+
+const nama = ['FIKY', 'BELLA', 'YOHAN', 'RECA', 'FITRI', 'DODDY'];
+const [ketua, wakil, ...anggota] = nama;
+
+OBJEK
+/*const orang = {
+  nama: 'FIKY',
+  email: 'fiky@gmail.com',
+  role: 'Admin',
+}
+const { nama, umur} = orang; //bisa mengubah name menjadi nama dengan cara {name: nama} ketika ingin menambahlan variabel baru bisa dengan {phone = 0812341234}
+
+Bongkar properti Objek bida dilakukan didalam function
+cost userAndRole = ({name, role}) => {
+  return `${name} ${role}`;//FIKY Admin
+}
+
+const animes = {
+  {
+    title: 'Naruto',
+    rating: 8.5,
+    genre: 'Action',
+    year: 2002,
+  },
+  {
+    title: 'One Piece',
+    rating: 9.0,
+    genre: 'Adventure',
+    year: 1999,
+  },
+  {
+    title: 'Attack on Titan',
+    rating: 9.5,
+    genre: 'Action',
+    year: 2013,
+  },
+  {
+    title: 'Death Note',
+    rating: 9.8,
+    genre: 'Mystery',
+    year: 2006,
+  },
+}
+
+cosnt anime = animes.map((anime) => return `${anime.title} (${anime.year}) rating ${anime.rating}`); OR cosnt anime = animes.map(title, year, rating) => return `${title} (${year}) rating ${rating}`);
+*/
